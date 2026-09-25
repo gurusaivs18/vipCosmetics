@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import '../css/Footer.css';
+import vipLogo from '../assets/logo.png';
 
 function Footer() {
   return (
@@ -7,7 +8,7 @@ function Footer() {
       <div className="container footer-grid">
         <div>
           <div className="footer-brand">
-            <span className="brand-dot" />
+            <img src={vipLogo} alt="VIP Cosmetics" className="brand-logo-img" />
             <h3>VIP Cosmetics Trading LLC</h3>
           </div>
           <p>
