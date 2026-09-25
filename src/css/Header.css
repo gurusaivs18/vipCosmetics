@@ -3,8 +3,14 @@
   font-size: 14px;
   color: var(--color-text-light);
   padding: 10px 0;
-}
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
 
+}
+ 
+ 
 .topbar-inner {
   display: flex;
   justify-content: flex-end;
@@ -30,9 +36,7 @@
   font-family: var(--font-logo);
 }
 .logo-box { width: 180px; height: 180px; display: flex; align-items: center; justify-content: center; } .site-logo { width: 100%; height: 100%; object-fit: contain; display: block; }
-.main-nav {
-  background: var(--color-nav-bg);
-}
+
 
 .nav-inner {
   display: flex;
