@@ -1,16 +1,31 @@
+/* =========================================================
+   HERO CAROUSEL
+========================================================= */
+
 .hero-carousel {
   position: relative;
-  width: 100%;
-  height: 460px;
-  background: #cfcfcf;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
   overflow: hidden;
+  background: #f4f0ec;
+  height:  850px;   /* smaller, compact footprint */
 }
+
+/* =========================================================
+   HERO IMAGE / VIDEO
+========================================================= */
 
 .hero-media {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  display: block;
+  object-fit: cover;   /* changed from contain — fills full width, crops portrait images top/bottom */
+  object-position: center;
 }
+
+/* =========================================================
+   CAROUSEL ARROWS
+========================================================= */
 
 .arrow {
   position: absolute;
@@ -18,15 +33,61 @@
   transform: translateY(-50%);
   width: 44px;
   height: 44px;
+  border: none;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.85);
-  font-size: 24px;
   color: #333;
+  font-size: 28px;
+  line-height: 1;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 2;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.arrow:hover {
+  background: rgba(255, 255, 255, 1);
 }
 
 .arrow-left { left: 20px; }
 .arrow-right { right: 20px; }
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+  .hero-carousel {
+    height: clamp(180px, 38vw, 300px);
+  }
+
+  .arrow {
+    width: 38px;
+    height: 38px;
+    font-size: 24px;
+  }
+
+  .arrow-left { left: 12px; }
+  .arrow-right { right: 12px; }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .hero-carousel {
+    height: clamp(160px, 45vw, 240px);
+  }
+
+  .arrow {
+    width: 34px;
+    height: 34px;
+    font-size: 21px;
+  }
+
+  .arrow-left { left: 8px; }
+  .arrow-right { right: 8px; }
+}
