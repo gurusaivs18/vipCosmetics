@@ -1,11 +1,17 @@
 import { useState } from 'react';
+import emailjs from '@emailjs/browser';
 import '../css/ContactForm.css';
+
+const SERVICE_ID = 'service_jgife38';      
+const TEMPLATE_ID = `template_cjzj8p3`;      
+const PUBLIC_KEY = 'mAgXMTXwg3WM34wDk';      
 
 function ContactForm() {
   const [form, setForm] = useState({
     fullName: '', email: '', phone: '', company: '',
     inquiryType: 'General', subject: '', message: '',
   });
+  const [status, setStatus] = useState('idle');
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -13,8 +19,30 @@ function ContactForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Wire this up to your actual submit endpoint / email service.
-    console.log('Contact form submitted:', form);
+    setStatus('sending');
+
+
+    const templateParams = {
+      title: form.subject,
+      name: form.fullName,
+      email: form.email,
+      time: new Date().toLocaleString('en-AE', { timeZone: 'Asia/Dubai' }),
+      message:
+        `${form.message}\n\n---\nPhone: ${form.phone || 'N/A'}\nCompany: ${form.company || 'N/A'}\nInquiry Type: ${form.inquiryType}`,
+    };
+
+    emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY)
+      .then(() => {
+        setStatus('sent');
+        setForm({
+          fullName: '', email: '', phone: '', company: '',
+          inquiryType: 'General', subject: '', message: '',
+        });
+      })
+      .catch((err) => {
+        console.error('EmailJS error:', err);
+        setStatus('error');
+      });
   };
 
   return (
@@ -70,8 +98,13 @@ function ContactForm() {
           We'll only use your details to respond to your inquiry.<br />
           By submitting this form, you agree to our <a href="/privacy">Privacy Policy</a>.
         </p>
-        <button type="submit" className="submit-btn">Send Message</button>
+        <button type="submit" className="submit-btn" disabled={status === 'sending'}>
+          {status === 'sending' ? 'Sending...' : 'Send Message'}
+        </button>
       </div>
+
+      {status === 'sent' && <p className="form-status form-status-ok">Message sent — we'll get back to you soon.</p>}
+      {status === 'error' && <p className="form-status form-status-error">Something went wrong. Please try again or email us directly.</p>}
     </form>
   );
 }

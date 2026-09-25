@@ -65,3 +65,20 @@
   font-weight: 600;
   white-space: nowrap;
 }
+.form-status {
+  margin-top: 16px;
+  font-size: 14px;
+}
+
+.form-status-ok {
+  color: #1a7a3c;
+}
+
+.form-status-error {
+  color: #b30000;
+}
+
+.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

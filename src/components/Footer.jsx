@@ -19,7 +19,7 @@ function Footer() {
         </div>
 
         <div>
-          <h4>VIP Cosmetics Trading LLC</h4>
+       
           <Link to="/about">About Us</Link>
           <Link to="/contact">Contact</Link>
         </div>
