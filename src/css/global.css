@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  --color-cream: #fbf4ef;
+  --color-olive: #55521b;
+  --color-gold: #f3bb5b;
+  --color-nav-bg: #fbeef8;
+  --color-maroon: #b2005a;
+  --color-text: #333333;
+  --color-text-light: #666666;
+  --color-border: #e8e2dc;
+  --color-footer-bg: #0a0a0a;
+  --color-stat-card-bg: #fbeef4;
+  --gradient-banner: linear-gradient(90deg, #f4a87d, #e888e0, #c978ee);
+
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-logo: 'Playfair Display', serif;
+
+  --max-width: 1200px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-text);
+  line-height: 1.6;
+  background: #fff;
+}
+
+img { max-width: 100%; display: block; }
+
+a { text-decoration: none; color: inherit; }
+
+button { font-family: inherit; cursor: pointer; border: none; }
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  color: #2a2a2a;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: 64px 0;
+}

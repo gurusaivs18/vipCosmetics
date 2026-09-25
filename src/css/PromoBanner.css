@@ -1,0 +1,30 @@
+.promo-banner {
+  background: var(--gradient-banner);
+  padding: 28px 0;
+  text-align: center;
+  color: #fff;
+}
+
+.promo-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.dot-active {
+  background: #fff;
+}
+
+.promo-text {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 20px;
+}

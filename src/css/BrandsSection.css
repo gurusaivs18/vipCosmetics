@@ -1,0 +1,28 @@
+.brands-section {
+  padding: 20px 0 60px;
+}
+
+.brands-intro {
+  color: var(--color-text-light);
+  font-size: 15px;
+  max-width: 100%;
+  margin-bottom: 32px;
+}
+
+.brands-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+}
+
+.brand-logo {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 20px;
+  color: #222;
+  padding: 20px 24px;
+  background: #f4f0ee;
+  min-width: 140px;
+  text-align: center;
+}

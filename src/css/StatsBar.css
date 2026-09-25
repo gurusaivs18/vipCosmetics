@@ -1,0 +1,30 @@
+.stats-bar {
+  background: linear-gradient(180deg, #f7ecf6, #ffffff);
+  padding: 40px 0 60px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.stat-card {
+  background: var(--color-stat-card-bg);
+  border-radius: 12px;
+  padding: 32px 16px;
+  text-align: center;
+}
+
+.stat-value {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 32px;
+  color: #d9c9d6;
+}
+
+.stat-label {
+  margin-top: 8px;
+  color: var(--color-text-light);
+  font-size: 15px;
+}

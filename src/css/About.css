@@ -1,0 +1,18 @@
+.about-page {
+  padding: 60px 0 80px;
+  max-width: 900px;
+}
+
+.about-block {
+  margin-bottom: 48px;
+}
+
+.about-block h2 {
+  font-size: 26px;
+  margin-bottom: 16px;
+}
+
+.about-block p {
+  color: var(--color-text-light);
+  font-size: 16px;
+}
