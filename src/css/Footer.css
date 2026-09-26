@@ -71,10 +71,15 @@
   display: flex;
   align-items: center;
   gap: 24px;
+  
 }
+ .footer-links ::hover {
+  text-decoration: underline red;
+ }
+
 
 .footer-links button {
-  background: #fff;
+  background: #e2a6a6;
   color: #000;
   padding: 8px 16px;
   border-radius: 20px;

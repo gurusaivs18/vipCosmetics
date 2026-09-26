@@ -7,7 +7,7 @@ function About() {
       <Reveal direction="left">
         <div className="about-block">
           <h2>Our Philosophy</h2>
-          <p>
+          <p className="about-text">
             Our philosophy centers on redefining self-care through advanced formulations, sustainable
             ingredients, and technology-infused skincare. Every product we represent embodies the
             perfect balance of science and nature — crafted to elevate daily routines into
