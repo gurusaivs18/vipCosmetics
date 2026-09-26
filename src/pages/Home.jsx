@@ -7,6 +7,8 @@ import RetailPartners from '../components/RetailPartners';
 import Reveal from '../components/Reveal';
 import '../css/Home.css';
 
+import skincareVideo from '../assets/skincare-video.mp4';
+
 function Home() {
   return (
     <>
@@ -30,6 +32,23 @@ function Home() {
 
       <Reveal direction="right">
         <ProductGrid />
+      </Reveal>
+
+      {/* VIDEO AFTER FEATURED COLLECTION */}
+      <Reveal direction="left">
+        <section className="home-video-section">
+          <div className="home-video-container">
+            <video
+              className="home-video"
+              src={skincareVideo}
+              autoPlay
+              muted
+              loop
+              playsInline
+              controls
+            />
+          </div>
+        </section>
       </Reveal>
 
       <Reveal direction="left">

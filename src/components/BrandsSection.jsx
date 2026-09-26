@@ -3,18 +3,18 @@ import '../css/BrandsSection.css';
 
 import brand1 from '../assets/yu-r1.png';
 import brand2 from '../assets/geske2.png';
-import brand3 from '../assets/phenome3.png';
-import brand4 from '../assets/antala4.png';
+// import brand3 from '../assets/phenome3.png';
+// import brand4 from '../assets/antala4.png';
 import brand5 from '../assets/equlib5.png';
-import brand6 from '../assets/sheida6.png';
+// import brand6 from '../assets/sheida6.png';
 
 const brands = [
   { name: 'Brand 1', img: brand1 },
   { name: 'Brand 2', img: brand2 },
-  { name: 'Brand 3', img: brand3 },
-  { name: 'Brand 4', img: brand4 },
+  // { name: 'Brand 3', img: brand3 },
+  // { name: 'Brand 4', img: brand4 },
   { name: 'Brand 5', img: brand5 },
-  { name: 'Brand 6', img: brand6 },
+  // { name: 'Brand 6', img: brand6 },
 ];
 
 function BrandsSection() {

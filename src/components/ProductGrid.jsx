@@ -1,30 +1,32 @@
  
 import '../css/ProductGrid.css';
 
-import product1 from '../assets/prod1.jpg';
-import product2 from '../assets/prod2.jpg';
+import product1 from '../assets/Ceramides.jpg';
+import product2 from '../assets/powderwash.png';
 import product3 from '../assets/prod3.jpg';
 import product4 from '../assets/prod4.jpg';
 import product5 from '../assets/prod5.jpg';
 import product6 from '../assets/prod6.jpg';
 import product7 from '../assets/prod7.jpg';
-import product8 from '../assets/prod8.jpg';
+import product8 from '../assets/antiaging8.jpeg';
+
+
 
 const products = [
   {
-    name: 'Deep hydration concentrate',
+    name: 'Barrier Repair serum',
     img: product1,
   },
-  {
-    name: 'Brightening daily gel wash',
+   {
+    name: 'Pore minimizing Enzyme clay powder wash',
     img: product2,
   },
   {
-    name: 'Firming & smoothing moisturizer',
+    name: 'Antioxidant glow booster',
     img: product3,
   },
   {
-    name: 'UVA/UVB daily protection',
+    name: 'On-the-go skin quencher',
     img: product4,
   },
   {
@@ -32,17 +34,19 @@ const products = [
     img: product5,
   },
   {
-    name: 'Antioxidant glow booster',
+    name: 'UVA/UVB daily protection',
     img: product6,
   },
   {
-    name: 'No-rinse makeup remover',
+    name: 'Firming & smoothing moisturizer',
     img: product7,
   },
   {
-    name: 'On-the-go skin quencher',
+    name: 'Anti-aging and repair eye cream',
     img: product8,
   },
+
+
 ];
 
 function ProductGrid() {

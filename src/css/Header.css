@@ -1,48 +1,72 @@
+/* =========================
+   TOP BAR
+========================= */
+
 .topbar {
   background: var(--color-cream);
   font-size: 14px;
   color: var(--color-text-light);
   padding: 10px 0;
-  position: fixed;
-  top: 0;
   width: 100%;
+  position: relative;
   z-index: 1000;
-
 }
- 
- 
+
 .topbar-inner {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   gap: 24px;
+  padding: 0 20px;
 }
 
+/* =========================
+   LOGO / HERO WASH
+========================= */
+
 .hero-wash {
-  background: linear-gradient(180deg, var(--color-cream), #fdeaf0);
+  background: linear-gradient(
+    180deg,
+    var(--color-cream),
+    #fdeaf0
+  );
   display: flex;
   justify-content: center;
+  align-items: center;
   padding: 24px 0;
 }
 
 .logo-box {
-  background: var(--color-olive);
   width: 180px;
   height: 180px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: var(--color-gold);
-  font-family: var(--font-logo);
+  overflow: hidden;
 }
-.logo-box { width: 180px; height: 180px; display: flex; align-items: center; justify-content: center; } .site-logo { width: 100%; height: 100%; object-fit: contain; display: block; }
 
+.site-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.main-nav {
+  width: 100%;
+  background: #fff;
+}
 
 .nav-inner {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 48px;
-  padding: 18px 0;
+  padding: 18px 20px;
   font-family: var(--font-heading);
   font-weight: 500;
   color: var(--color-text);
@@ -51,9 +75,116 @@
 .nav-inner a {
   padding-bottom: 6px;
   border-bottom: 2px solid transparent;
+  white-space: nowrap;
+  text-decoration: none;
+  transition: color 0.2s ease, border-color 0.2s ease;
 }
 
 .nav-inner a.active {
   color: var(--color-maroon);
   border-bottom-color: var(--color-maroon);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 768px) {
+
+  .topbar {
+    font-size: 13px;
+    padding: 9px 0;
+  }
+
+  .topbar-inner {
+    justify-content: center;
+    gap: 16px;
+    padding: 0 15px;
+    flex-wrap: wrap;
+  }
+
+  .hero-wash {
+    padding: 20px 0;
+  }
+
+  .logo-box {
+    width: 145px;
+    height: 145px;
+  }
+
+  .nav-inner {
+    gap: 30px;
+    padding: 15px 15px;
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+  .topbar {
+    font-size: 12px;
+    padding: 8px 10px;
+  }
+
+  .topbar-inner {
+    justify-content: center;
+    gap: 6px 14px;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  .hero-wash {
+    padding: 16px 0;
+  }
+
+  .logo-box {
+    width: 120px;
+    height: 120px;
+  }
+
+  .nav-inner {
+    gap: 0;
+    justify-content: space-around;
+    padding: 13px 10px;
+  }
+
+  .nav-inner a {
+    font-size: 14px;
+    padding: 5px 8px;
+  }
+}
+
+
+/* =========================
+   VERY SMALL PHONES
+========================= */
+
+@media (max-width: 360px) {
+
+  .topbar {
+    font-size: 11px;
+  }
+
+  .topbar-inner {
+    gap: 4px 10px;
+  }
+
+  .logo-box {
+    width: 105px;
+    height: 105px;
+  }
+
+  .nav-inner {
+    padding: 12px 5px;
+  }
+
+  .nav-inner a {
+    font-size: 13px;
+    padding: 4px 5px;
+  }
 }

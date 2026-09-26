@@ -6,8 +6,8 @@ import heroVideo from '../assets/hero.mp4';
 // import heroPoster from '../assets/hero/hero-poster.jpg';
 import slide2 from '../assets/confident-woman.png';
 import slide3 from '../assets/vip_car_1.png';
-import slide4 from '../assets/vip_car_3.png';
-import slide5 from '../assets/vip_car_4.png';
+// import slide4 from '../assets/vip_car_3.png';
+// import slide5 from '../assets/vip_car_4.png';
 
 const slides = [
   {
@@ -25,16 +25,16 @@ const slides = [
     src: slide3,
     alt: 'VIP Cosmetics',
   },
-  {
-    type: 'image',
-    src: slide4,
-    alt: 'VIP Cosmetics',
-  },
-  {
-    type: 'image',
-    src: slide5,
-    alt: 'VIP Cosmetics',
-  },
+  // {
+  //   type: 'image',
+  //   src: slide4,
+  //   alt: 'VIP Cosmetics',
+  // },
+  // {
+  //   type: 'image',
+  //   src: slide5,
+  //   alt: 'VIP Cosmetics',
+  // },
 ];
 
 function HeroCarousel() {
