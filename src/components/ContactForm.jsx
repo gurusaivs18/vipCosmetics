@@ -65,6 +65,7 @@ function ContactForm() {
   const handleWhatsApp = () => {
     const whatsappNumber = '971504545061';
 
+
     const whatsappMessage = `Hello, I would like to make an inquiry.
 
 Name: ${form.fullName || 'N/A'}

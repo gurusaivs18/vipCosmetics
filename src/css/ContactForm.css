@@ -377,3 +377,13 @@
     font-size: 10px;
   }
 }
+.whatsapp-link {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.whatsapp-link:hover {
+  color: #25d366;
+}
