@@ -1,3 +1,4 @@
+ 
 .site-footer {
   background: var(--color-footer-bg);
   color: #fff;
@@ -29,15 +30,17 @@
   color: #c9c9c9;
   font-size: 14px;
   line-height: 1.8;
+  margin: 0;
 }
 
 .footer-grid h3 {
   font-size: 18px;
+  margin: 0;
 }
 
 .footer-grid h4 {
   color: #fff;
-  margin-bottom: 20px;
+  margin: 0 0 20px;
   font-size: 16px;
 }
 
@@ -46,13 +49,19 @@
   color: #c9c9c9;
   font-size: 14px;
   margin-bottom: 14px;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-grid a:hover {
+  color: #fff;
 }
 
 .office-title {
-  color: #fff;
+  color: #fff !important;
   font-weight: 600;
-  margin-top: 24px;
-  margin-bottom: 8px;
+  margin-top: 24px !important;
+  margin-bottom: 8px !important;
   line-height: 1.6;
 }
 
@@ -61,29 +70,231 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 24px;
+  padding: 24px 0;
   font-size: 13px;
   color: #999;
-
 }
 
 .footer-links {
   display: flex;
   align-items: center;
   gap: 24px;
-  
 }
- .footer-links ::hover {
-  text-decoration: underline red;
- }
 
+.footer-links a {
+  color: #999;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: #fff;
+  text-decoration: underline;
+  text-decoration-color: red;
+}
 
 .footer-links button {
+  border: none;
   background: #fcedef;
   color: #000;
   padding: 8px 16px;
   border-radius: 20px;
   font-size: 13px;
   font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.footer-links button:hover {
+  background: #fff;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 992px) {
+  .site-footer {
+    padding-top: 50px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1.5fr 1fr 1.5fr;
+    gap: 35px;
+    padding-bottom: 40px;
+  }
+
+  .brand-logo-img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .footer-grid h3 {
+    font-size: 17px;
+  }
+
+  .footer-grid p,
+  .footer-grid a {
+    font-size: 13px;
+  }
+
+  .footer-bottom {
+    padding: 20px 0;
+  }
+
+  .footer-links {
+    gap: 18px;
+  }
+}
+
+/* =========================
+   MOBILE / SMALL TABLET
+========================= */
+
+@media (max-width: 768px) {
+  .site-footer {
+    padding-top: 45px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 35px 30px;
+    padding: 0 0 35px;
+  }
+
+  .footer-grid > div:first-child {
+    grid-column: 1 / -1;
+  }
+
+  .footer-brand {
+    margin-bottom: 15px;
+  }
+
+  .brand-logo-img {
+    width: 75px;
+    height: 75px;
+  }
+
+  .footer-grid h3 {
+    font-size: 17px;
+  }
+
+  .footer-grid p,
+  .footer-grid a {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .footer-grid h4 {
+    margin-bottom: 15px;
+  }
+
+  .office-title {
+    margin-top: 20px !important;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 20px 0;
+  }
+
+  .footer-links {
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 14px 20px;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+  .site-footer {
+    padding-top: 35px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding-bottom: 30px;
+  }
+
+  .footer-grid > div:first-child {
+    grid-column: auto;
+  }
+
+  .footer-brand {
+    gap: 10px;
+  }
+
+  .brand-logo-img {
+    width: 65px;
+    height: 65px;
+  }
+
+  .footer-grid h3 {
+    font-size: 16px;
+  }
+
+  .footer-grid p,
+  .footer-grid a {
+    font-size: 13px;
+  }
+
+  .footer-grid h4 {
+    font-size: 15px;
+    margin-bottom: 12px;
+  }
+
+  .footer-grid a {
+    margin-bottom: 10px;
+  }
+
+  .office-title {
+    margin-top: 18px !important;
+  }
+
+  .footer-bottom {
+    font-size: 12px;
+    gap: 15px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .footer-links button {
+    padding: 8px 14px;
+  }
+}
+
+/* =========================
+   VERY SMALL PHONES
+========================= */
+
+@media (max-width: 360px) {
+  .brand-logo-img {
+    width: 55px;
+    height: 55px;
+  }
+
+  .footer-grid h3 {
+    font-size: 15px;
+  }
+
+  .footer-grid p,
+  .footer-grid a {
+    font-size: 12px;
+  }
+
+  .footer-bottom {
+    font-size: 11px;
+  }
 }
  
